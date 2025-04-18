@@ -86,7 +86,7 @@ CUDA is required for running GPU-accelerated operations.
 Run the following command to install the required libraries:
 ```bash
 pip install pandas numpy
-pip install ollama openai transformers huggingface_hub
+pip install ollama openai transformers huggingface_hub langchain
 ```
 
 ---
