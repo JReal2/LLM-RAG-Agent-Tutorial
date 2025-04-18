@@ -1,4 +1,4 @@
-# LLM-RAG-Agent-Tutorial
+# LLM, RAG and Agent Tutorial
 This repository contains AI tool, lib installation link for LLM & Agent, focusing on creative coding, modeling, and physical computing using them. 
 
 ## Overview
