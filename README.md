@@ -1,12 +1,13 @@
 # LLM-RAG-Agent-Tutorial
-This repository contains AI tool installation link, example code and resources for LLM, focusing on creative coding, modeling, sound generation and physical computing using Python, LLM. 
+This repository contains AI tool, lib installation link for LLM & Agent, focusing on creative coding, modeling, and physical computing using them. 
 
 ## Overview
 - **Huggingface**: For uisng LLM, Stable Diffusion-based model, You need to sign up Huggingface. In example, [Single Image-to-3D model](https://huggingface.co/spaces/stabilityai/stable-point-aware-3d)
 - **Ollama**: For using AI tools in interactive art projects. You need to install NVIDIA cuda for run it.
 - **Blender**: LLM-based Graphic Modeling using Blender. In example, [Blender LLM Addin blog](https://medium.com/@laputa99999/using-open-source-models-with-blender-for-ai-assisted-3d-modeling-comparative-study-with-openai-9848209f93b8)
 
-The repository includes examples to experiment with generative art, live music coding, and real-time audio manipulation.</br>
+The repository includes examples to experiment with generative media art.</br>
+- [Gen AI for Media Art](https://github.com/mac999/llm-media-art-demo)
 In addition, you can find Text-to-3D model tool the below link. 
 - [Text-to-3D model code](https://github.com/mac999/blender-llm-addin): Using Open-Source Models with Blender for AI-Assisted 3D Modeling: Comparative Study with OpenAI GPT
 
@@ -17,41 +18,7 @@ In addition, you can find Text-to-3D model tool the below link.
 Before running the examples, ensure you have Python 3.8 or higher installed. Some tool or library use NVIDIA GPU, so if you want to use it, prepare notebook computer with NVIDIA GPU(recommend 8GB. minimum 4GB)
 Follow the instructions below to set up your environment:
 
-### 1. Huggingface, OpenAI (Optinnal) Account 
-Make Accounts for OpenAI, Huggingface
-- Sign up [Huggingface](https://huggingface.co/) to develop Open source LLM-base application
-- Sign up [OpenAI API](https://platform.openai.com/) to develop ChatGPT-based application (*Note: don't check auto-subscription option)
-
-### 2. Python
-Ensure that Python (version 3.7 or later) is installed on your system. About macbook, please refer to [how to install python on mac](https://www.youtube.com/watch?v=u4xUUBTER4I).
-
-- **Download Python**: [python.org](https://www.python.org/)
-- During installation:
-  - Check the box for **"Add Python to PATH"**.
-  - Install Python along with **pip**.
-
-To confirm installation in terminal(DOS command in windows. Shell terminal in linux):
-```bash
-python --version
-```
-
-### 3. Anaconda (Optional)
-Ensure that Anaconda (version 24.0 or later) is installed on your system.
-
-- **Download Anaconda**: [Anaconda](https://docs.anaconda.com/anaconda/install/)
-
-### 4. Install Ollama 
-For examples that utilize Ollama, follow the installation instructions from the [Ollama website](https://www.ollama.com/).
-
-### 5. Blender (for AI-Assisted Modeling)
-If the script or application involves Blender for 3D modeling, ensure Blender is installed.
-
-- **Download Blender**: [blender.org](https://www.blender.org/download/)
-- After installation:
-  - Enable the **Python Console** within Blender to run scripts directly.
-  - Ensure Blender uses the same Python environment where required libraries are installed.
-
-### 6. NVIDIA Drivers (for Ollama. optional)
+### NVIDIA Drivers (for Ollama. optional)
 For GPU-accelerated tasks, you need to install the correct NVIDIA drivers for your GPU.
 
 - **Download NVIDIA Drivers**: [NVIDIA Driver Downloads](https://www.nvidia.com/Download/index.aspx)
@@ -65,7 +32,7 @@ To confirm installation:
 nvidia-smi
 ```
 
-### 7. CUDA Toolkit (for NVIDIA. optional)
+### CUDA Toolkit (for NVIDIA. optional)
 CUDA is required for running GPU-accelerated operations.
 
 - **Download CUDA Toolkit**: [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
@@ -74,7 +41,30 @@ CUDA is required for running GPU-accelerated operations.
   - Install the CUDA Toolkit with default options.
   - Add the CUDA binary paths to your environment variables.
 
-### 8. PyTorch library (for NVIDIA. optional)
+### Python
+Ensure that Python (version 3.7 or later) is installed on your system. About macbook, please refer to [how to install python on mac](https://www.youtube.com/watch?v=u4xUUBTER4I).
+
+- **Download Python**: [python.org](https://www.python.org/)
+- During installation:
+  - Check the box for **"Add Python to PATH"**.
+  - Install Python along with **pip**.
+
+To confirm installation in terminal(DOS command in windows. Shell terminal in linux):
+```bash
+python --version
+```
+
+### Anaconda
+Ensure that Anaconda (version 24.0 or later) is installed on your system.
+
+- **Download Anaconda**: [Anaconda](https://docs.anaconda.com/anaconda/install/)
+
+### Huggingface, OpenAI (Optinnal) Account 
+Make Accounts for OpenAI, Huggingface
+- Sign up [Huggingface](https://huggingface.co/) to develop Open source LLM-base application
+- Sign up [OpenAI API](https://platform.openai.com/) to develop ChatGPT-based application (*Note: don't check auto-subscription option)
+
+### PyTorch library 
 
 - If AI-related models or tools will be used (such as LLM model fine-tuning with Ollama), install stable [PyTorch](https://pytorch.org/get-started/locally/)(11.8 version) and additional packages:
    ```bash
@@ -82,16 +72,27 @@ CUDA is required for running GPU-accelerated operations.
    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
    ```
 
-### 9. Install Python Packages
+### Install Python Packages
 Run the following command to install the required libraries:
 ```bash
 pip install pandas numpy
 pip install ollama openai transformers huggingface_hub langchain
 ```
 
+### Install Ollama 
+For examples that utilize Ollama, follow the installation instructions from the [Ollama website](https://www.ollama.com/).
+
+### Blender (for AI-Assisted Modeling)
+If the script or application involves Blender for 3D modeling, ensure Blender is installed.
+
+- **Download Blender**: [blender.org](https://www.blender.org/download/)
+- After installation:
+  - Enable the **Python Console** within Blender to run scripts directly.
+  - Ensure Blender uses the same Python environment where required libraries are installed.
+
 ---
 
-### 10. Install sublime and vscode (Optional)
+### Install sublime and vscode (Optional)
 Install [Sublime](https://www.sublimetext.com/) for editing source code</br>
 Install [vscode](https://code.visualstudio.com/download) for debuging code. Please refer to how to [install vscode](https://www.youtube.com/watch?v=vesxpfOAOCw).</br>
 
