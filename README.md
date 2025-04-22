@@ -61,7 +61,7 @@ Ensure that Anaconda (version 24.0 or later) is installed on your system.
 
 ### Huggingface, OpenAI (Optinnal) Account 
 Make Accounts for OpenAI, Huggingface
-- Sign up [Huggingface](https://huggingface.co/) to develop Open source LLM-base application
+- Sign up [Huggingface](https://huggingface.co/) and make [API token](https://huggingface.co/settings/tokens)to develop Open source LLM-base application
 - Sign up [OpenAI API](https://platform.openai.com/) to develop ChatGPT-based application (*Note: don't check auto-subscription option)
 
 ### PyTorch library 
