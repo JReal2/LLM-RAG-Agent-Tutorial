@@ -2,7 +2,7 @@ from huggingface_hub import notebook_login
 notebook_login()
 
 from datasets import load_dataset
-squad = load_dataset("squad", split="train[:5000]") # Stanford Question Answering Dataset
+squad = load_dataset("squad", split="train[:5000]") # Stanford Question Answering Dataset  https://huggingface.co/datasets/rajpurkar/squad/tree/main
 squad = squad.train_test_split(test_size=0.2)
 print(squad['train'][0])
 
@@ -65,7 +65,7 @@ from transformers import DefaultDataCollator
 data_collator = DefaultDataCollator()
 
 from transformers import AutoModelForQuestionAnswering, TrainingArguments, Trainer
-model = AutoModelForQuestionAnswering.from_pretrained("distilbert/distilbert-base-uncased")
+model = AutoModelForQuestionAnswering.from_pretrained("distilbert/distilbert-base-uncased") # https://huggingface.co/distilbert/distilbert-base-uncased
 
 training_args = TrainingArguments(
     output_dir="squad_qa_custom_model",

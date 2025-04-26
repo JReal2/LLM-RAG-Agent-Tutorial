@@ -27,7 +27,7 @@ def tokenize_and_align_tags(records):
     return tokenized_results
 
 from datasets import load_dataset
-wnut = load_dataset('wnut_17')
+wnut = load_dataset('wnut_17') # https://huggingface.co/datasets/leondz/wnut_17
 tokenized_wnut = wnut.map(tokenize_and_align_tags, batched=True)
 tag_names = wnut["test"].features[f"ner_tags"].feature.names
 id2label = dict(enumerate(tag_names))
