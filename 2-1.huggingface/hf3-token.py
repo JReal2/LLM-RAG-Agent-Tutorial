@@ -1,3 +1,15 @@
+from transformers import BertTokenizer
+
+tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+
+# 사전 정의된 특수 토큰 확인
+print("CLS Token:", tokenizer.cls_token)  # [CLS]
+print("SEP Token:", tokenizer.sep_token)  # [SEP]
+print("MASK Token:", tokenizer.mask_token)  # [MASK]
+print("PAD Token:", tokenizer.pad_token)  # [PAD]
+print("UNK Token:", tokenizer.unk_token)  # [UNK]
+
+
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # 사전 학습모델 및 토크나이저 로딩
