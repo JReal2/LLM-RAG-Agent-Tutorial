@@ -1,7 +1,7 @@
 # LLM, RAG and Agent Tutorial
 This repository contains AI tool, lib installation link for LLM & Agent, focusing on creative LLM coding, modeling, and computing as the viewpoint of media project. 
-Please check the below docuemnt to understand development environment. 
-- [development environment](https://medium.com/@laputa99999/using-open-source-models-with-blender-for-ai-assisted-3d-modeling-comparative-study-with-openai-9848209f93b8)
+Please read the below docuemnt to understand development environment. 
+- [LLM development environment document(word file)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/dev-env.docx)
 
 ## Overview
 - **Huggingface**: For uisng LLM, Stable Diffusion-based model, You need to sign up Huggingface. In example, [Single Image-to-3D model](https://huggingface.co/spaces/stabilityai/stable-point-aware-3d)
