@@ -1,6 +1,6 @@
 # LLM, RAG and Agent Tutorial
 This repository contains AI tool, lib installation link for LLM & Agent, focusing on creative LLM coding, modeling, and computing as the viewpoint of media project. 
-Please read the below docuemnt to understand development environment. 
+Please download and read the below docuemnt to understand this development environment. 
 - [LLM development environment document(word file)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/dev-env.docx)
 
 ## Overview
