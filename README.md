@@ -43,7 +43,7 @@ CUDA is required for running GPU-accelerated operations.
   - Add the CUDA binary paths to your environment variables.
 
 ### Python
-Ensure that Python (version 3.7 or later) is installed on your system. About macbook, please refer to [how to install python on mac](https://www.youtube.com/watch?v=u4xUUBTER4I).
+Ensure that Python (safe version 3.10 or 3.12) is installed on your system. About macbook, please refer to [how to install python on mac](https://www.youtube.com/watch?v=u4xUUBTER4I).
 
 - **Download Python**: [python.org](https://www.python.org/)
 - During installation:
