@@ -100,26 +100,31 @@ model.eval()
 # Step 10: Example inference text
 inference_text =  "안녕."
 
-# Tokenize input
-encoded_input = tokenizer(
-    inference_text,
-    max_length=128,
-    padding="max_length",
-    truncation=True,
-    return_tensors="pt",
-)
+def gen_model(question):
+    # Tokenize input
+    encoded_input = tokenizer(
+        question,
+        max_length=128,
+        padding="max_length",
+        truncation=True,
+        return_tensors="pt",
+    )
 
-input_ids = encoded_input["input_ids"].to(device)
-attention_mask = encoded_input["attention_mask"].to(device)
+    input_ids = encoded_input["input_ids"].to(device)
+    attention_mask = encoded_input["attention_mask"].to(device)
 
-# Predict masked tokens
-with torch.no_grad():
-    outputs = model(input_ids=input_ids, attention_mask=attention_mask)
-    predictions = outputs.logits
+    # Predict masked tokens
+    with torch.no_grad():
+        outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+        predictions = outputs.logits
 
-# Decode predicted tokens
-predicted_ids = torch.argmax(predictions, dim=-1)
-decoded_output = tokenizer.decode(predicted_ids[0], skip_special_tokens=True)
+    # Decode predicted tokens
+    predicted_ids = torch.argmax(predictions, dim=-1)
+    decoded_output = tokenizer.decode(predicted_ids[0], skip_special_tokens=True)
 
+    return decoded_output
+    
+decoded_output = gen_model(inference_text)
 print(f"Input: {inference_text}")
 print(f"Output: {decoded_output}")
+
