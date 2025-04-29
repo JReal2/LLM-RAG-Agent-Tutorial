@@ -40,6 +40,59 @@ current_date_time_string = str(datetime.now().strftime("%Y%m%d_%H%M"))
 multi30k.URL["train"] = "https://raw.githubusercontent.com/neychev/small_DL_repo/master/datasets/Multi30k/training.tar.gz"
 multi30k.URL["valid"] = "https://raw.githubusercontent.com/neychev/small_DL_repo/master/datasets/Multi30k/validation.tar.gz"
 
+# helper function to yield list of tokens
+def yield_tokens(data_iter: Iterable, language: str) -> List[str]:
+	language_index = {SRC_LANGUAGE: 0, TGT_LANGUAGE: 1}
+
+	for data_sample in data_iter:
+		yield token_transform[language](data_sample[language_index[language]])
+
+
+def generate_square_subsequent_mask(sz): # create diagonal matrix 
+	mask = (torch.triu(torch.ones((sz, sz), device=DEVICE)) == 1).transpose(0, 1)
+	mask = mask.float().masked_fill(mask == 0, float('-inf')).masked_fill(mask == 1, float(0.0))
+	return mask
+
+
+def create_mask(src, tgt):
+	src_seq_len = src.shape[0]
+	tgt_seq_len = tgt.shape[0]
+
+	tgt_mask = generate_square_subsequent_mask(tgt_seq_len).to(DEVICE)
+	src_mask = torch.zeros((src_seq_len, src_seq_len),device=DEVICE).type(torch.bool) # don't train future token
+
+	src_padding_mask = (src == PAD_IDX).transpose(0, 1) # padding mask
+	tgt_padding_mask = (tgt == PAD_IDX).transpose(0, 1) # padding mask
+	return src_mask, tgt_mask, src_padding_mask, tgt_padding_mask
+
+# helper function to club together sequential operations
+def sequential_transforms(*transforms):
+	def func(txt_input):
+		for transform in transforms:
+			txt_input = transform(txt_input)
+		return txt_input
+	return func
+
+# function to add BOS/EOS and create tensor for input sequence indices
+def tensor_transform(token_ids: List[int]):
+	return torch.cat((torch.tensor([BOS_IDX]),
+					torch.tensor(token_ids),
+					torch.tensor([EOS_IDX])))
+
+# function to collate data samples into batch tensors
+def collate_fn(batch):
+	global text_transform
+
+	src_batch, tgt_batch = [], []
+	for src_sample, tgt_sample in batch:
+		src_batch.append(text_transform[SRC_LANGUAGE](src_sample.rstrip("\n")))
+		tgt_batch.append(text_transform[TGT_LANGUAGE](tgt_sample.rstrip("\n")))
+
+	src_batch = pad_sequence(src_batch, padding_value=PAD_IDX)
+	tgt_batch = pad_sequence(tgt_batch, padding_value=PAD_IDX)
+	return src_batch, tgt_batch
+
+
 # Place-holders
 token_transform[SRC_LANGUAGE] = get_tokenizer('spacy', language='de_core_news_sm')
 token_transform[TGT_LANGUAGE] = get_tokenizer('spacy', language='en_core_web_sm')
@@ -83,12 +136,6 @@ for ln in [SRC_LANGUAGE, TGT_LANGUAGE]:
 											vocab_transform[ln], #Numericalization
 											tensor_transform) # Add BOS/EOS and create tensor
 
-# helper function to yield list of tokens
-def yield_tokens(data_iter: Iterable, language: str) -> List[str]:
-	language_index = {SRC_LANGUAGE: 0, TGT_LANGUAGE: 1}
-
-	for data_sample in data_iter:
-		yield token_transform[language](data_sample[language_index[language]])
 
 # helper Module that adds positional encoding to the token embedding to introduce a notion of word order.
 class PositionalEncoding(nn.Module):
@@ -166,50 +213,6 @@ class Seq2SeqTransformer(nn.Module):
 		return self.transformer.decoder(self.positional_encoding(
 						self.tgt_tok_emb(tgt)), memory,
 						tgt_mask)  
-
-def generate_square_subsequent_mask(sz): # create diagonal matrix 
-	mask = (torch.triu(torch.ones((sz, sz), device=DEVICE)) == 1).transpose(0, 1)
-	mask = mask.float().masked_fill(mask == 0, float('-inf')).masked_fill(mask == 1, float(0.0))
-	return mask
-
-
-def create_mask(src, tgt):
-	src_seq_len = src.shape[0]
-	tgt_seq_len = tgt.shape[0]
-
-	tgt_mask = generate_square_subsequent_mask(tgt_seq_len).to(DEVICE)
-	src_mask = torch.zeros((src_seq_len, src_seq_len),device=DEVICE).type(torch.bool) # don't train future token
-
-	src_padding_mask = (src == PAD_IDX).transpose(0, 1) # padding mask
-	tgt_padding_mask = (tgt == PAD_IDX).transpose(0, 1) # padding mask
-	return src_mask, tgt_mask, src_padding_mask, tgt_padding_mask
-
-# helper function to club together sequential operations
-def sequential_transforms(*transforms):
-	def func(txt_input):
-		for transform in transforms:
-			txt_input = transform(txt_input)
-		return txt_input
-	return func
-
-# function to add BOS/EOS and create tensor for input sequence indices
-def tensor_transform(token_ids: List[int]):
-	return torch.cat((torch.tensor([BOS_IDX]),
-					torch.tensor(token_ids),
-					torch.tensor([EOS_IDX])))
-
-# function to collate data samples into batch tensors
-def collate_fn(batch):
-	global text_transform
-
-	src_batch, tgt_batch = [], []
-	for src_sample, tgt_sample in batch:
-		src_batch.append(text_transform[SRC_LANGUAGE](src_sample.rstrip("\n")))
-		tgt_batch.append(text_transform[TGT_LANGUAGE](tgt_sample.rstrip("\n")))
-
-	src_batch = pad_sequence(src_batch, padding_value=PAD_IDX)
-	tgt_batch = pad_sequence(tgt_batch, padding_value=PAD_IDX)
-	return src_batch, tgt_batch
 
 def evaluate(val_dataloader, model, loss_fn):
 	model.eval()
