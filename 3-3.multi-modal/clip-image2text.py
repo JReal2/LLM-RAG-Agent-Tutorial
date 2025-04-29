@@ -1,3 +1,5 @@
+# you should install the CLIP library first
+# pip install git+https://github.com/openai/CLIP.git
 import os
 import clip
 import torch
@@ -12,6 +14,16 @@ cifar100 = CIFAR100(root=os.path.expanduser("~/.cache"), download=True, train=Fa
 
 # Prepare the inputs
 image, class_id = cifar100[3637]
+print(f"Class ID: {class_id}, Class Name: {cifar100.classes[class_id]}")
+
+import matplotlib.pyplot as plt
+
+# Display the image
+plt.imshow(image)
+plt.axis('off')
+plt.title(f"Class: {cifar100.classes[class_id]}")
+plt.show()
+
 image_input = preprocess(image).unsqueeze(0).to(device)
 text_inputs = torch.cat([clip.tokenize(f"a photo of a {c}") for c in cifar100.classes]).to(device)
 
@@ -39,8 +51,9 @@ from PIL import Image
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model, preprocess = clip.load("ViT-B/32", device=device)
 
-image = preprocess(Image.open("f:/projects/multimodal/clip/CLIP.png")).unsqueeze(0).to(device)
-text = clip.tokenize(["a diagram", "a dog", "a cat"]).to(device)
+image = preprocess(Image.open("./cat3.jpg")).unsqueeze(0).to(device)
+labels = ["a diagram", "a dog", "a cat"]
+text = clip.tokenize(labels).to(device)
 
 with torch.no_grad():
     image_features = model.encode_image(image)
@@ -49,4 +62,5 @@ with torch.no_grad():
     logits_per_image, logits_per_text = model(image, text)
     probs = logits_per_image.softmax(dim=-1).cpu().numpy()
 
-print("Label probs:", probs)  # prints: [[0.9927937  0.00421068 0.00299572]]
+for i in range(len(labels)):
+    print(f"Text: {labels[i]}, Probability: {probs[0][i]}")
