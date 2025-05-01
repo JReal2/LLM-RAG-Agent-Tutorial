@@ -130,7 +130,7 @@ def main():
 
 	while True:
 		try:
-			query = input("\n사용자 질문: ")
+			query = input("\n사용자 질문: ") # in pdf, what is mama mia?
 			if query.lower() in ("exit", "quit"):
 				break
 			answer = "잘 모르겠어요"
