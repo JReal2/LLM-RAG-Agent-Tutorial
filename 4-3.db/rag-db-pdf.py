@@ -18,8 +18,8 @@ TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 
 VECTOR_DB_PATH = './faiss_index'
 FILES_DIRECTORY = './files'
-CHUNK_SIZE = 2000
-CHUNK_OVERLAP = 300
+CHUNK_SIZE = 1000
+CHUNK_OVERLAP = 200
 
 llm_model = OpenAI(temperature=0, openai_api_key=OPENAI_API_KEY)
 
@@ -39,7 +39,8 @@ def save_to_faiss(docs):
 	return vectordb
 
 def create_qa_chain(vectordb):
-	retriever = vectordb.as_retriever(search_type="mmr", search_kwargs={'k': 6, 'lambda_mult': 0.25}) # top-k=6, tradeoff lambda=0.25
+	retriever = vectordb.as_retriever(search_type="mmr", search_kwargs={'k': 3, 'lambda_mult': 0.25}) # top-k=3, tradeoff lambda=0.25
+
 	output = RetrievalQA.from_chain_type(llm=llm_model, retriever=retriever, chain_type="stuff") # map_reduce, stuff, refine, map_rerank
 	return output
 
@@ -122,6 +123,13 @@ def main():
 		OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY),
 		allow_dangerous_deserialization=True
 	)
+	
+	# test serach "mama mia" using vectordb
+	docs = vectordb.similarity_search("mama mia", search_type="mmr", search_kwargs={'k': 3, 'lambda_mult': 0.25})
+	for doc in docs:
+		print(f"문서: {doc.metadata['source']}")
+		print(f"내용: {doc.page_content}")
+
 	qa_chain = create_qa_chain(vectordb)
 	agent, memory = create_agent(qa_chain)
 
@@ -130,7 +138,8 @@ def main():
 
 	while True:
 		try:
-			query = input("\n사용자 질문: ") # in pdf, what is mama mia?
+			query = input("\n사용자 질문: ") # 1) who is Donna in pdf? 2) in web, what is mama mia? 3) what is mama mia? 
+											# 1) PDF에서 PEFT를 한글로 설명해줘. 2) PEFT를 한글로 설명해줘.
 			if query.lower() in ("exit", "quit"):
 				break
 			answer = "잘 모르겠어요"
@@ -138,6 +147,7 @@ def main():
 			print(f"답변: {answer}")
 			memory.chat_memory.add_user_message(query)
 			memory.chat_memory.add_ai_message(answer)
+			
 		except Exception as e:
 			response = extract_action_input(str(e))
 			if response == None:
