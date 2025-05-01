@@ -14,7 +14,7 @@ class ChatPDF:
     chain = None
 
     def __init__(self):
-        self.model = ChatOllama(model="mistral")  # OLLAMA의 mistral 모델 이용
+        self.model = ChatOllama(model="gemma2")  # OLLAMA의 gemma2:latest 모델 이용
         self.text_splitter = RecursiveCharacterTextSplitter(chunk_size=1024, chunk_overlap=100) # PDF 텍스트 분할
         self.prompt = PromptTemplate.from_template(
             """
@@ -33,6 +33,13 @@ class ChatPDF:
         chunks = filter_complex_metadata(chunks)  
 
         vector_store = Chroma.from_documents(documents=chunks, embedding=FastEmbedEmbeddings())  # 임메딩 벡터 저장소 생성 및 청크 설정
+
+        # Test search for "mama mia" in the vector store
+        search_results = vector_store.similarity_search("mama mia", k=3)
+        print("Test search results for 'mama mia':")
+        for doc in search_results:
+            print(doc)
+
         self.retriever = vector_store.as_retriever(search_type="similarity_score_threshold",
             search_kwargs={
                 "k": 3,
