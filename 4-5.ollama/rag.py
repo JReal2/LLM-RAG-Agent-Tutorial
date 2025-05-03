@@ -7,6 +7,10 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema.runnable import RunnablePassthrough
 from langchain.prompts import PromptTemplate
 from langchain.vectorstores.utils import filter_complex_metadata
+from langchain.schema.runnable import RunnableBranch
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
 
 class ChatPDF:
     vector_store = None
@@ -15,17 +19,16 @@ class ChatPDF:
 
     def __init__(self):
         self.model = ChatOllama(model="gemma2")  # OLLAMA의 gemma2:latest 모델 이용
-        self.text_splitter = RecursiveCharacterTextSplitter(chunk_size=1024, chunk_overlap=100) # PDF 텍스트 분할
+        self.text_splitter = RecursiveCharacterTextSplitter(chunk_size=300, chunk_overlap=100) # PDF 텍스트 분할
         self.prompt = PromptTemplate.from_template(
             """
-            <s> [INST] You are an assistant for question-answering tasks. Use the following pieces of retrieved context 
-            to answer the question. If you don't know the answer, just say that you don't know. Use three sentences
+            <s> [INST] You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. Use three sentences
              maximum and keep the answer concise. [/INST] </s> 
             [INST] Question: {question} 
             Context: {context} 
             Answer: [/INST]
             """
-        )
+        ) # ex) If you don't know the answer, just say that you don't know. 
 
     def ingest(self, pdf_file_path: str):
         docs = PyPDFLoader(file_path=pdf_file_path).load()  # 랭체인의 PDF 모듈 이용해 문서 로딩
@@ -47,7 +50,8 @@ class ChatPDF:
             },
         )  # 유사도 스코어 기반 벡터 검색 설정
 
-        self.chain = ({"context": self.retriever, "question": RunnablePassthrough()} | self.prompt | self.model | StrOutputParser()) # 프롬프트 입력에 대한 모델 실행, 출력 파서 방법 설정
+        parser = StrOutputParser()  # 모델 출력 파서 설정        
+        self.chain = ({"context": self.retriever, "question": RunnablePassthrough()} | self.prompt | self.model | parser) # 만약, 여러 도구 지원 필요하면, tools를 지원하는 agent사용할것
 
     def ask(self, query: str):  # 질문 프롬프트 입력 시 호출
         if not self.chain:
