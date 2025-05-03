@@ -44,7 +44,7 @@ def save_to_faiss(documents):
     return vectordb
 
 def create_retrieval_qa(vectordb):
-    retriever = vectordb.as_retriever(search_type="mmr", search_kwargs={'k': 6, 'lambda_mult': 0.25})
+    retriever = vectordb.as_retriever(search_type="mmr", search_kwargs={'k': 3, 'lambda_mult': 0.25})
     qa_chain = RetrievalQA.from_chain_type(
         llm=llm_model,
         retriever=retriever,

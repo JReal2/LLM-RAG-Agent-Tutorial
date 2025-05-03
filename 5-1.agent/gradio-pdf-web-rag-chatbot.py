@@ -83,7 +83,7 @@ docsearch.as_retriever(
 Full name: langchain_core.vectorstores.base.VectorStore.as_retriever
 '''
 def create_retrieval_qa(vectordb):
-	retriever = vectordb.as_retriever(search_type="mmr", search_kwargs={'k': 6, 'lambda_mult': 0.25})
+	retriever = vectordb.as_retriever(search_type="mmr", search_kwargs={'k': 3, 'lambda_mult': 0.25})
 	qa_chain = RetrievalQA.from_chain_type(
 		llm=llm_model,
 		retriever=retriever,
@@ -231,7 +231,8 @@ def main():
 	with gr.Blocks() as demo:
 		gr.Markdown("Coding QA Expert Chatbot (PDF + Web Search)")
 		chatbot = gr.Chatbot()
-		msg = gr.Textbox(placeholder="질문을 입력하세요...")
+		msg = gr.Textbox(placeholder="질문을 입력하세요...") # 1) in pdf, what is b2gm? 2) i'm tom, developer. 3) who is tom
+
 		clear = gr.Button("초기화")
 
 		state = gr.State([])
