@@ -1,1 +1,8 @@
-make simple hello world webapp using django without database and launch.json to run it.
+update this index.html for "AIVLE" school school monitoring. This project has the following features. 
+1) When a user runs this web app, there is a search input box on the top panel, a menu on the left panel, a leaflet map dashboard on the right, and a school information display dashboard. 2) About 10 school locations are displayed as PoIs on the leaflet map. 3) When a user clicks on a PoI, school information corresponding to that PoI is displayed on the dashboard. 4) School information as sample data displays the principal's name, number of administrators, number of students, current student attendance.
+
+update the font color as black in the School Information Dashboard
+
+change the style as table format of the School Information Dashboard
+
+행을 하나 더 만들고, manager list 데쉬보드를 생성해. 사용자가 맵에서 PoI를 선택할 때 manager list 데쉬보드에 샘플로 테이블을 표시해. 테이블 컬럼은 '이름', '부서', '연락처'야. 
