@@ -111,7 +111,7 @@ If the script or application involves Blender for 3D modeling, ensure Blender is
 
 ---
 
-### Install sublime and vscode (Optional)
+## Install sublime and vscode (Optional)
 Install [Sublime](https://www.sublimetext.com/) for editing source code</br>
 Install [vscode](https://code.visualstudio.com/download) for debuging code. Please refer to how to [install vscode](https://www.youtube.com/watch?v=vesxpfOAOCw).</br>
 
