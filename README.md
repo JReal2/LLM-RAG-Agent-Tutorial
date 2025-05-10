@@ -136,10 +136,11 @@ After completing the installations, verify that the environment is set up correc
 4. **Test Python Libraries**:
    Create a test script and import the installed libraries:
    ```python
-   import p5 # only, python 3.10, working
    import pandas as pd
    import numpy as np
+   import torch
    print("Libraries are installed successfully!")
+   print(f"torch version = {torch.__version__}")
    ```
 
 # For media art
