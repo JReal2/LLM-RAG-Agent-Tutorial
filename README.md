@@ -35,6 +35,7 @@ Follow the instructions below to set up your environment:
 - [LLM development environment document(word file)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/dev-env.docx)
 
 In refernce, this lesson will use the below 
+- **Colab Pro**: To run jupyter notebook, You need to create Colab account. For finetuning LLM, Colab Pro will be needed.
 - **OpenAI**: To use ChatGPT LLM model, You need to create OpenAI API key
 - **Huggingface**: For uisng LLM, Stable Diffusion-based model, You need to sign up Huggingface. In example, [Single Image-to-3D model](https://huggingface.co/spaces/stabilityai/stable-point-aware-3d)
 - **Ollama**: For using AI tools in interactive art projects. You need to install NVIDIA cuda for run it.
