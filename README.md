@@ -40,8 +40,8 @@ In refernce, this lesson will use the below
 - **OpenAI**: To use ChatGPT LLM model and API, You need to create ChatGPT account and OpenAI API key
 - **Huggingface**: For uisng LLM, Stable Diffusion-based model, You need to sign up Huggingface. In example, [Single Image-to-3D model](https://huggingface.co/spaces/stabilityai/stable-point-aware-3d)
 - **Ollama**: For using AI tools in open source LLM projects. You need to install NVIDIA cuda for run it.
-- **LangChain** with Vector DB: For RAG, langchain, chroma db etc will be used.
 - **Generative AI service** like Sora, Runway, Dream machine, Kling AI, Canva etc: For prompt engineering practice. If you want to use it temporarily and don't share your private, use temp email like [Temp Mail](https://temp-mail.org/en/).
+- **LangChain** with Vector DB: For RAG, langchain, chroma db etc will be used.
 
 <img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/4-2.llm-rag/rag-agent-chain.PNG" height="150" />
 
