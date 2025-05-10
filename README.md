@@ -1,14 +1,15 @@
 # LLM, RAG and AI Agent Tutorial
-This repository contains AI tool, lib installation and documents for LLM & AI Agent & MCP development, focusing on creative LLM coding, modeling, and computing as the viewpoint of project development. The colab code, source, presentation like below can be used for developing LLM, RAG and AI Agent. 
-- Transformer encoder and decoder tutoring. Transformer scratch source code
-- Token and Embedding for NLP (natural language process)
-- Multi-modal like CLIP, LLaVA
-- Stable Diffusion and prompt engineering using text to image, video, audio, sound, document (word, presentation) and code (app, game) 
-- LLM. Train and Finetune for model like gemma, llama
-- RAG and Langchain. Vector DB like [FAISS](https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/), Chroma DB, Graph DB using Neo4j
-- Chatbot with Ollama. Gradio and Streamlit for UX
-- Vibe coding using Copilot, GPT etc
-- AI Agent and MCP(Model Context Protocol)</br>
+This repository contains [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx) including AI tools installation and documents for LLM, RAG, AI Agent and MCP development, focusing on creative LLM coding, modeling, and computing as the viewpoint of project development. The colab code, source, presentation like below can be used for developing LLM, RAG and AI Agent. 
+- [Transformer encoder and decoder tutoring](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/1-2.transformer). [Transformer scratch source code](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-3.deep-tranformer)
+- Token and Embedding for NLP (natural language process) using [huggingface](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-1.huggingface)
+- [Multi-modal](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/3-3.multi-modal) like CLIP, LLaVA
+- Stable Diffusion and prompt engineering using [text to image, video, audio, sound, document (word, presentation) and code (app, game) tools](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-2.genai-prompt) 
+- LLM. [Train and Finetune](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/3-2.finetuning) for model like gemma, llama
+- [RAG](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-2.llm-rag) and [Langchain](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-1.langchain). [Vector DB](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-3.db) like [FAISS](https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/), Chroma DB, Graph DB using Neo4j
+- [Chatbot](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-3.db) with [Ollama](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-5.ollama). Gradio and Streamlit for UX
+- [AI Agent](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-1.agent) and [MCP(Model Context Protocol)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-2.llm-mcp-app)
+- LLM Internal Code Analysis like [Deepseek](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-4.deep-seek), Manus</br>
+- [Vibe coding](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-3.vibe-coding) using Copilot, GPT etc
 
 <img src="https://github.com/mac999/BIM_LLM_code_agent/raw/main/doc/img1.gif" height="300"/><img src="https://github.com/mac999/geo-llm-agent-dashboard/raw/main/doc/geo_llm_demo.gif" height="300"/>
 
@@ -20,8 +21,13 @@ LLM uses deep learning model architecture like transformer which uses numerical 
 - [numerical analysis(Youtube)](https://www.youtube.com/watch?v=bfoxcZYoGfQ)
 - [numerical analysis material](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/numerical-analysis.pdf)
 
-# Installation
-Before running the examples, ensure you have Python 3.10 or higher installed. Some tool or library use NVIDIA GPU, so if you want to use it, prepare notebook computer with NVIDIA GPU(recommend 8GB. minimum 4GB)
+# Installation for LLM, RAG and AI agent development
+First, clone this repository. 
+```bash
+git clone https://github.com/mac999/LLM-RAG-Agent-Tutorial.git
+```
+Second, check [syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx) to understand LLM, RAG and AI agent development course. 
+Before running the example code, ensure you have Colab Pro, Python 3.10 or higher installed. Some tool or library use NVIDIA GPU, so if you want to use it, prepare notebook computer with NVIDIA GPU(recommend 8GB. minimum 4GB)
 Follow the instructions below to set up your environment:
 - [LLM development environment document(word file)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/dev-env.docx)
 
