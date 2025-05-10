@@ -39,6 +39,9 @@ In refernce, this lesson will use the below
 - **OpenAI**: To use ChatGPT LLM model, You need to create OpenAI API key
 - **Huggingface**: For uisng LLM, Stable Diffusion-based model, You need to sign up Huggingface. In example, [Single Image-to-3D model](https://huggingface.co/spaces/stabilityai/stable-point-aware-3d)
 - **Ollama**: For using AI tools in open source LLM projects. You need to install NVIDIA cuda for run it.
+- **LangChain** with Vector DB: For RAG, langchain, chroma db etc will be used.
+
+<img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/4-2.llm-rag/rag-agent-chain.PNG" height="100" />
 
 ## NVIDIA Drivers (for Ollama. optional)
 For GPU-accelerated tasks, you need to install the correct NVIDIA drivers for your GPU.
