@@ -1,3 +1,4 @@
+# install https://sonic-pi.net
 # pip install python-sonic
 from psonic import *
 from threading import Thread, Condition
