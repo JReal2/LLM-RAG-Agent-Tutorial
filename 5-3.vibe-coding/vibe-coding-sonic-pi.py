@@ -1,8 +1,9 @@
 # pip install python-sonic
-set_server_parameter_from_log("127.0.0.1")
 from psonic import *
 from threading import Thread, Condition
 from random import choice
+
+set_server_parameter_from_log("127.0.0.1")
 
 def random_riff(condition):
     use_synth(PROPHET)
