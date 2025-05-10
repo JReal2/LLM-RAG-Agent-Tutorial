@@ -1,5 +1,5 @@
 # LLM, RAG and AI Agent Tutorial
-This repository contains [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx) including AI tools installation and documents for LLM, RAG, AI Agent and MCP development, focusing on creative LLM coding, modeling, and computing as the viewpoint of project development. The colab code, source, presentation like below can be used for developing LLM, RAG and AI Agent. 
+This repository contains [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx) including AI tools installation and documents for LLM, RAG, AI Agent and MCP development, focusing on creative LLM coding, modeling, and computing as the viewpoint of project development. The colab code, source, presentation like below can be used for developing LLM, RAG and AI Agent. The subjects are like below. 
 - [Transformer encoder and decoder tutoring](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/1-2.transformer). [Transformer scratch source code](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-3.deep-tranformer)
 - Token and Embedding for NLP (natural language process) using [huggingface](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-1.huggingface)
 - [Multi-modal](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/3-3.multi-modal) like CLIP, LLaVA
@@ -27,7 +27,7 @@ First, clone this repository.
 ```bash
 git clone https://github.com/mac999/LLM-RAG-Agent-Tutorial.git
 ```
-Second, check [syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx) to understand LLM, RAG and AI agent development course.</br>
+Second, check [syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx) to understand LLM, RAG and AI agent development courses.</br>
 <img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/lesson-plan.PNG" height="230" /><img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-2.transformer/transformer-architecture.PNG" height="230" /><img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/lesson-reference.PNG" height="230" />
 </br>
 Before running the example code, ensure you have Colab Pro, Python 3.10 or higher installed. Some tool or library use NVIDIA GPU, so if you want to use it, prepare notebook computer with NVIDIA GPU(recommend 8GB. minimum 4GB)
