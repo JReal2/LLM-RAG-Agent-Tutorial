@@ -1,5 +1,14 @@
 # LLM, RAG and AI Agent Tutorial
-This repository contains AI tool, lib installation and documents for LLM & AI Agent & MCP development, focusing on creative LLM coding, modeling, and computing as the viewpoint of project development. 
+This repository contains AI tool, lib installation and documents for LLM & AI Agent & MCP development, focusing on creative LLM coding, modeling, and computing as the viewpoint of project development. The colab code, source, presentation like below can be used for developing LLM, RAG and AI Agent. 
+- Transformer encoder and decoder tutoring. Transformer scratch source code
+- Token and Embedding for NLP (natural language process)
+- Multi-modal like CLIP, LLaVA
+- Stable Diffusion and prompt engineering using text to image, video, audio, sound, document (word, presentation) and code (app, game) 
+- LLM. Train and Finetune for model like gemma, llama
+- RAG and Langchain. Vector DB like [FAISS](https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/), Chroma DB, Graph DB using Neo4j
+- Chatbot with Ollama. Gradio and Streamlit for UX
+- Vibe coding using Copilot, GPT etc
+- AI Agent and MCP(Model Context Protocol) 
 
 # Preparation for LLM, RAG and AI Agent study
 LLM uses deep learning model architecture like transformer which uses numerical analysis, linear algebra, so it's better to understand the below subjects before starting it.
@@ -135,7 +144,6 @@ In addition, you can find Text-to-3D model tool the below link.
 
 # Reference
 - [NVIDIA cuda programming, open source and AI](https://www.slideshare.net/slideshow/nvidia-cuda-programming-open-source-and-ai/270372806?from_search=6)
-- [Docker 에서 Ollama, ComfyUI](https://www.youtube.com/watch?v=IxxOMLkcYNY)
 - [Chat with ChatGPT through Arduino IoT Cloud](https://projecthub.arduino.cc/dbeamonte_arduino/chat-with-chatgpt-through-arduino-iot-cloud-6b4ef0)
 - [chatGPT-Arduino-library](https://github.com/programming-electronics-academy/chatGPT-Arduino-library/tree/main)
 - [ChatGPT_Client_For_Arduino](https://github.com/0015/ChatGPT_Client_For_Arduino)
