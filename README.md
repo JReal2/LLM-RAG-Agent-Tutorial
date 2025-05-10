@@ -1,5 +1,5 @@
 # LLM, RAG and AI agent development tutorial
-This repository contains [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx) including AI tools installation and documents for LLM, RAG, AI Agent and MCP development, focusing on creative LLM coding, modeling, and computing as the viewpoint of project development. The colab code, source, presentation like below can be used for developing LLM, RAG and AI Agent. The subjects are like below. 
+This repository contains [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx) including AI tools installation and documents for LLM(large language model), RAG(retrieval augmented generation), AI Agent and MCP(Model Context Protocol) tool development, focusing on creative LLM coding, modeling, and computing as the viewpoint of project development. The colab code, source, presentation like below can be used for developing LLM, RAG and AI Agent. The subjects are like below. 
 - [Transformer encoder and decoder tutoring](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/1-2.transformer). [Transformer scratch source code](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-3.deep-tranformer)
 - Token and Embedding for NLP (natural language process) using [huggingface](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-1.huggingface)
 - [Multi-modal](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/3-3.multi-modal) like CLIP, LLaVA
@@ -7,7 +7,7 @@ This repository contains [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tuto
 - LLM. [Train and Finetune](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/3-2.finetuning) for model like gemma, llama
 - [RAG](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-2.llm-rag) and [Langchain](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-1.langchain). [Vector DB](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-3.db) like [FAISS](https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/), Chroma DB, Graph DB using Neo4j
 - [Chatbot](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-3.db) with [Ollama](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/4-5.ollama). Gradio and Streamlit for UX
-- [AI Agent](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-1.agent) and [MCP(Model Context Protocol)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-2.llm-mcp-app)
+- [AI Agent](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-1.agent) and [MCP](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-2.llm-mcp-app)
 - LLM Internal Code Analysis like [Deepseek](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-4.deep-seek), Manus</br>
 - [Vibe coding](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-3.vibe-coding) using Copilot, GPT etc
 
