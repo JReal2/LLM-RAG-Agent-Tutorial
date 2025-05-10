@@ -104,14 +104,6 @@ pip install ollama openai transformers huggingface_hub langchain
 ## Install Ollama 
 For examples that utilize Ollama, follow the installation instructions from the [Ollama website](https://www.ollama.com/).
 
-## Blender (for AI-Assisted Modeling)
-If the script or application involves Blender for 3D modeling, ensure Blender is installed.
-
-- **Download Blender**: [blender.org](https://www.blender.org/download/)
-- After installation:
-  - Enable the **Python Console** within Blender to run scripts directly.
-  - Ensure Blender uses the same Python environment where required libraries are installed.
-
 ## Install sublime and vscode (Recommend)
 Install [Sublime](https://www.sublimetext.com/) for editing source code</br>
 Install [vscode](https://code.visualstudio.com/download) for debuging code. Please refer to how to [install vscode](https://www.youtube.com/watch?v=vesxpfOAOCw).</br>
@@ -150,6 +142,12 @@ After completing the installations, verify that the environment is set up correc
 If you're interested in media art, refer to the below link. The repository includes examples to experiment with generative media art.</br>
 - [Gen AI for Media Art](https://github.com/mac999/llm-media-art-demo)
 <img src="https://github.com/mac999/blender-llm-addin/raw/main/doc/blender_gpt.gif" height="300"/>
+
+For Blender using AI-Assisted Modeling, 
+- **Download Blender**: [blender.org](https://www.blender.org/download/)
+- After installation:
+  - Enable the **Python Console** within Blender to run scripts directly.
+  - Ensure Blender uses the same Python environment where required libraries are installed.
 
 In addition, you can find Text-to-3D model tool the below link. 
 - [Text-to-3D model code](https://github.com/mac999/blender-llm-addin): Using Open-Source Models with Blender for AI-Assisted 3D Modeling: Comparative Study with OpenAI GPT
