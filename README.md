@@ -38,7 +38,7 @@ In refernce, this lesson will use the below
 - **Colab Pro**: To run jupyter notebook, You need to create Colab account. For finetuning LLM, Colab Pro will be needed.
 - **OpenAI**: To use ChatGPT LLM model, You need to create OpenAI API key
 - **Huggingface**: For uisng LLM, Stable Diffusion-based model, You need to sign up Huggingface. In example, [Single Image-to-3D model](https://huggingface.co/spaces/stabilityai/stable-point-aware-3d)
-- **Ollama**: For using AI tools in interactive art projects. You need to install NVIDIA cuda for run it.
+- **Ollama**: For using AI tools in open source LLM projects. You need to install NVIDIA cuda for run it.
 
 ## NVIDIA Drivers (for Ollama. optional)
 For GPU-accelerated tasks, you need to install the correct NVIDIA drivers for your GPU.
