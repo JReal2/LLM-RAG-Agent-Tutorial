@@ -1,7 +1,14 @@
 # LLM, RAG and AI Agent Tutorial
 This repository contains AI tool, lib installation and documents for LLM & AI Agent & MCP development, focusing on creative LLM coding, modeling, and computing as the viewpoint of project development. 
 
-## Preparation and Installation
+# Preparation for LLM, RAG and AI Agent study
+LLM uses deep learning model architecture like transformer which uses numerical analysis, linear algebra, so it's better to understand the below subjects before starting it.
+- [linear algebra](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/linear-algebra.pdf)
+- [newton mathod for equation solution](https://www.intmath.com/applications-differentiation/newtons-method-interactive.php) and [differential Calculus](https://www.geogebra.org/t/differential-calculus)
+<img src="ttps://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/numerical-analysis-newton.PNG" alt="newton method" width="300"/>
+- [numerical analysis(Youtube)](https://www.youtube.com/watch?v=bfoxcZYoGfQ)
+
+# Installation
 Before running the examples, ensure you have Python 3.10 or higher installed. Some tool or library use NVIDIA GPU, so if you want to use it, prepare notebook computer with NVIDIA GPU(recommend 8GB. minimum 4GB)
 Follow the instructions below to set up your environment:
 - [LLM development environment document(word file)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/dev-env.docx)
@@ -11,7 +18,7 @@ In refernce, this lesson will use the below
 - **Huggingface**: For uisng LLM, Stable Diffusion-based model, You need to sign up Huggingface. In example, [Single Image-to-3D model](https://huggingface.co/spaces/stabilityai/stable-point-aware-3d)
 - **Ollama**: For using AI tools in interactive art projects. You need to install NVIDIA cuda for run it.
 
-### NVIDIA Drivers (for Ollama. optional)
+## NVIDIA Drivers (for Ollama. optional)
 For GPU-accelerated tasks, you need to install the correct NVIDIA drivers for your GPU.
 
 - **Download NVIDIA Drivers**: [NVIDIA Driver Downloads](https://www.nvidia.com/Download/index.aspx)
@@ -25,7 +32,7 @@ To confirm installation:
 nvidia-smi
 ```
 
-### CUDA Toolkit (for NVIDIA. optional)
+## CUDA Toolkit (for NVIDIA. optional)
 CUDA is required for running GPU-accelerated operations.
 
 - **Download CUDA Toolkit**: [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
@@ -34,7 +41,7 @@ CUDA is required for running GPU-accelerated operations.
   - Install the CUDA Toolkit with default options.
   - Add the CUDA binary paths to your environment variables.
 
-### Python
+## Python
 Ensure that Python (safe version 3.10 or 3.12) is installed on your system. About macbook, please refer to [how to install python on mac](https://www.youtube.com/watch?v=u4xUUBTER4I).
 
 - **Download Python**: [python.org](https://www.python.org/)
@@ -47,7 +54,7 @@ To confirm installation in terminal(DOS command in windows. Shell terminal in li
 python --version
 ```
 
-### Anaconda
+## Anaconda
 Ensure that Anaconda (version 24.0 or later) is installed on your system.
 
 - **Download Anaconda**: [Anaconda](https://docs.anaconda.com/anaconda/install/)
@@ -57,7 +64,7 @@ Make Accounts for OpenAI, Huggingface
 - Sign up [Huggingface](https://huggingface.co/) and make [API token](https://huggingface.co/settings/tokens)to develop Open source LLM-base application
 - Sign up [OpenAI API](https://platform.openai.com/) to develop ChatGPT-based application (*Note: don't check auto-subscription option)
 
-### PyTorch library 
+## PyTorch library 
 
 - If AI-related models or tools will be used (such as LLM model fine-tuning with Ollama), install stable [PyTorch](https://pytorch.org/get-started/locally/)(11.8 version) and additional packages:
    ```bash
@@ -65,17 +72,17 @@ Make Accounts for OpenAI, Huggingface
    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
    ```
 
-### Install Python Packages
+## Install Python Packages
 Run the following command to install the required libraries:
 ```bash
 pip install pandas numpy
 pip install ollama openai transformers huggingface_hub langchain
 ```
 
-### Install Ollama 
+## Install Ollama 
 For examples that utilize Ollama, follow the installation instructions from the [Ollama website](https://www.ollama.com/).
 
-### Blender (for AI-Assisted Modeling)
+## Blender (for AI-Assisted Modeling)
 If the script or application involves Blender for 3D modeling, ensure Blender is installed.
 
 - **Download Blender**: [blender.org](https://www.blender.org/download/)
@@ -91,7 +98,7 @@ Install [vscode](https://code.visualstudio.com/download) for debuging code. Plea
 
 ---
 
-## **System Environment Checks**
+# **System Environment Checks**
 
 After completing the installations, verify that the environment is set up correctly:
 
@@ -119,13 +126,13 @@ After completing the installations, verify that the environment is set up correc
    print("Libraries are installed successfully!")
    ```
 
-## For media art
+# For media art
 If you're interested in media art, refer to the below link. The repository includes examples to experiment with generative media art.</br>
 - [Gen AI for Media Art](https://github.com/mac999/llm-media-art-demo)
 In addition, you can find Text-to-3D model tool the below link. 
 - [Text-to-3D model code](https://github.com/mac999/blender-llm-addin): Using Open-Source Models with Blender for AI-Assisted 3D Modeling: Comparative Study with OpenAI GPT
 
-## Reference
+# Reference
 - [NVIDIA cuda programming, open source and AI](https://www.slideshare.net/slideshow/nvidia-cuda-programming-open-source-and-ai/270372806?from_search=6)
 - [Docker 에서 Ollama, ComfyUI](https://www.youtube.com/watch?v=IxxOMLkcYNY)
 - [Chat with ChatGPT through Arduino IoT Cloud](https://projecthub.arduino.cc/dbeamonte_arduino/chat-with-chatgpt-through-arduino-iot-cloud-6b4ef0)
@@ -134,8 +141,8 @@ In addition, you can find Text-to-3D model tool the below link.
 - [I tried ChatGPT for Arduino - It’s Surprising](https://blog.wokwi.com/learn-arduino-using-ai-chatgpt/)
 - [Using ChatGPT to Write Code for Arduino and ESP32](https://dronebotworkshop.com/chatgpt/)
 
-## License
+# License
 This repository is licensed under the MIT License. You are free to use, modify, and distribute the code for personal or commercial projects.
 
-## Author
+# Author
 laputa99999@gmail.com
