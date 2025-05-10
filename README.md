@@ -1,5 +1,5 @@
 # LLM, RAG and AI agent development tutorial
-This repository contains [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx) for LLM(large language model), RAG(retrieval augmented generation), AI Agent and MCP(Model Context Protocol) class focusing on creative AI agent development, modeling, and computing as the viewpoint of project development. The colab code, source, presentation and reference with AI tools like below can be used for developing LLM, RAG and AI Agent. The subjects are like below. 
+This repository contains [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx) for LLM(large language model), RAG(retrieval augmented generation), AI Agent and MCP(Model Context Protocol) class focusing on creative AI agent development, modeling, and computing as the viewpoint of usecase. The colab code, source, presentation and reference with AI tools like below can be used for developing LLM, RAG and AI Agent. The subjects are like below. 
 - [Transformer encoder and decoder tutoring](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/1-2.transformer). [Transformer scratch source code](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-3.deep-tranformer)
 - Token and Embedding for NLP (natural language process) using [huggingface](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-1.huggingface)
 - [Multi-modal](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/3-3.multi-modal) like CLIP, LLaVA
@@ -10,6 +10,7 @@ This repository contains [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tuto
 - [AI Agent](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-1.agent) and [MCP](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-2.llm-mcp-app)
 - LLM Internal Code Analysis like [Deepseek](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-4.deep-seek), Manus</br>
 - [Vibe coding](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-3.vibe-coding) using Copilot, GPT etc
+- [Project and documentation](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/6.project)
 
 <img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/5-1.agent/streamlit-chatbot.PNG" height="230"/><img src="https://github.com/mac999/BIM_LLM_code_agent/raw/main/doc/img1.gif" height="230"/><img src="https://github.com/mac999/geo-llm-agent-dashboard/raw/main/doc/geo_llm_demo.gif" height="230"/>
 
