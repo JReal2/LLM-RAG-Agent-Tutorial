@@ -11,7 +11,7 @@ This repository contains [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tuto
 - LLM Internal Code Analysis like [Deepseek](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/2-4.deep-seek), Manus</br>
 - [Vibe coding](https://github.com/mac999/LLM-RAG-Agent-Tutorial/tree/main/5-3.vibe-coding) using Copilot, GPT etc
 
-<img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/5-1.agent/streamlit-chatbot.PNG" height="250"/><img src="https://github.com/mac999/BIM_LLM_code_agent/raw/main/doc/img1.gif" height="250"/><img src="https://github.com/mac999/geo-llm-agent-dashboard/raw/main/doc/geo_llm_demo.gif" height="250"/>
+<img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/5-1.agent/streamlit-chatbot.PNG" height="230"/><img src="https://github.com/mac999/BIM_LLM_code_agent/raw/main/doc/img1.gif" height="230"/><img src="https://github.com/mac999/geo-llm-agent-dashboard/raw/main/doc/geo_llm_demo.gif" height="230"/>
 
 # Preparation for LLM, RAG and AI Agent study
 LLM uses deep learning model architecture like transformer which uses numerical analysis, linear algebra, so it's better to understand the below subjects before starting it.
