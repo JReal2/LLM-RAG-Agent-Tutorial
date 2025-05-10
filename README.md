@@ -152,13 +152,20 @@ For Blender using AI-Assisted Modeling,
 If you're interested in text to 3D model, you can find Text-to-3D model tool the below link. 
 - [Text-to-3D model code](https://github.com/mac999/blender-llm-addin): Using Open-Source Models with Blender for AI-Assisted 3D Modeling: Comparative Study with OpenAI GPT
 
-# Reference
-- [NVIDIA cuda programming, open source and AI](https://www.slideshare.net/slideshow/nvidia-cuda-programming-open-source-and-ai/270372806?from_search=6)
+If you're interested in Arduino based generative AI, refer to the below. 
 - [Chat with ChatGPT through Arduino IoT Cloud](https://projecthub.arduino.cc/dbeamonte_arduino/chat-with-chatgpt-through-arduino-iot-cloud-6b4ef0)
-- [chatGPT-Arduino-library](https://github.com/programming-electronics-academy/chatGPT-Arduino-library/tree/main)
+- [ChatGPT Arduino library](https://github.com/programming-electronics-academy/chatGPT-Arduino-library/tree/main)
 - [ChatGPT_Client_For_Arduino](https://github.com/0015/ChatGPT_Client_For_Arduino)
-- [I tried ChatGPT for Arduino - It’s Surprising](https://blog.wokwi.com/learn-arduino-using-ai-chatgpt/)
+- [ChatGPT for Arduino](https://blog.wokwi.com/learn-arduino-using-ai-chatgpt/)
 - [Using ChatGPT to Write Code for Arduino and ESP32](https://dronebotworkshop.com/chatgpt/)
+
+# Reference
+- Lee Boonstra, Google, 2025, Prompt Engineering
+- Julia Wiesinger, Patrick Marlow and Vladimir Vuskovic, Google, 2024, Agents
+- OpenAI, A practical guide to building agents
+- Keith Chugg, USC, 2020, Brief Introduction to Natural Language Processing
+- Mustafa Degerli, Bilkent University, 2014, Software Processes and Software Development Process Models
+- [NVIDIA cuda programming, open source and AI](https://www.slideshare.net/slideshow/nvidia-cuda-programming-open-source-and-ai/270372806?from_search=6)
 
 # License
 This repository is licensed under the MIT License. You are free to use, modify, and distribute the code for personal or commercial projects.
