@@ -8,7 +8,7 @@ This repository contains AI tool, lib installation and documents for LLM & AI Ag
 - RAG and Langchain. Vector DB like [FAISS](https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/), Chroma DB, Graph DB using Neo4j
 - Chatbot with Ollama. Gradio and Streamlit for UX
 - Vibe coding using Copilot, GPT etc
-- AI Agent and MCP(Model Context Protocol)
+- AI Agent and MCP(Model Context Protocol)</br>
 <img src="https://github.com/mac999/BIM_LLM_code_agent/raw/main/doc/img1.gif" height="300"/><img src="https://github.com/mac999/blender-llm-addin/raw/main/doc/blender_gpt.gif" height="300"/>
 
 # Preparation for LLM, RAG and AI Agent study
