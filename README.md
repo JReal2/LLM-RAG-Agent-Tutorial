@@ -109,9 +109,7 @@ If the script or application involves Blender for 3D modeling, ensure Blender is
   - Enable the **Python Console** within Blender to run scripts directly.
   - Ensure Blender uses the same Python environment where required libraries are installed.
 
----
-
-## Install sublime and vscode (Optional)
+## Install sublime and vscode (Recommend)
 Install [Sublime](https://www.sublimetext.com/) for editing source code</br>
 Install [vscode](https://code.visualstudio.com/download) for debuging code. Please refer to how to [install vscode](https://www.youtube.com/watch?v=vesxpfOAOCw).</br>
 
