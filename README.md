@@ -149,7 +149,7 @@ For Blender using AI-Assisted Modeling,
   - Enable the **Python Console** within Blender to run scripts directly.
   - Ensure Blender uses the same Python environment where required libraries are installed.
 
-In addition, you can find Text-to-3D model tool the below link. 
+If you're interested in text to 3D model, you can find Text-to-3D model tool the below link. 
 - [Text-to-3D model code](https://github.com/mac999/blender-llm-addin): Using Open-Source Models with Blender for AI-Assisted 3D Modeling: Comparative Study with OpenAI GPT
 
 # Reference
