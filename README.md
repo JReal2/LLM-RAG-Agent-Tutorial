@@ -41,7 +41,7 @@ In refernce, this lesson will use the below
 - **Ollama**: For using AI tools in open source LLM projects. You need to install NVIDIA cuda for run it.
 - **LangChain** with Vector DB: For RAG, langchain, chroma db etc will be used.
 
-<img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/4-2.llm-rag/rag-agent-chain.PNG" height="100" />
+<img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/4-2.llm-rag/rag-agent-chain.PNG" height="150" />
 
 ## NVIDIA Drivers (for Ollama. optional)
 For GPU-accelerated tasks, you need to install the correct NVIDIA drivers for your GPU.
