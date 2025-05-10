@@ -16,6 +16,7 @@ This repository contains [Syllabus](https://github.com/mac999/LLM-RAG-Agent-Tuto
 # Preparation for LLM, RAG and AI Agent study
 LLM uses deep learning model architecture like transformer which uses numerical analysis, linear algebra, so it's better to understand the below subjects before starting it.
 - [linear algebra](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/linear-algebra.pdf)
+- [Matrix, tensor handling and visualization](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/data-visualization(numpy%2C%20pandas%2C%20pytorch%2C%20tensor).pdf) 
 - [newton mathod for equation solution](https://www.intmath.com/applications-differentiation/newtons-method-interactive.php). In addition, [differential Calculus](https://www.geogebra.org/t/differential-calculus) includes newton method.
 <img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/numerical-analysis-newton.PNG" alt="newton method" width="400"/>
 
