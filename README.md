@@ -5,8 +5,9 @@ This repository contains AI tool, lib installation and documents for LLM & AI Ag
 LLM uses deep learning model architecture like transformer which uses numerical analysis, linear algebra, so it's better to understand the below subjects before starting it.
 - [linear algebra](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/linear-algebra.pdf)
 - [newton mathod for equation solution](https://www.intmath.com/applications-differentiation/newtons-method-interactive.php). In addition, [differential Calculus](https://www.geogebra.org/t/differential-calculus) includes newton method.
-<img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/numerical-analysis-newton.PNG" alt="newton method" width="300"/>
+<img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/numerical-analysis-newton.PNG" alt="newton method" width="400"/>
 - [numerical analysis(Youtube)](https://www.youtube.com/watch?v=bfoxcZYoGfQ)
+- [numerical analysis material](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/numerical-analysis.pdf)
 
 # Installation
 Before running the examples, ensure you have Python 3.10 or higher installed. Some tool or library use NVIDIA GPU, so if you want to use it, prepare notebook computer with NVIDIA GPU(recommend 8GB. minimum 4GB)
