@@ -27,7 +27,8 @@ First, clone this repository.
 ```bash
 git clone https://github.com/mac999/LLM-RAG-Agent-Tutorial.git
 ```
-Second, check [syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx) to understand LLM, RAG and AI agent development course. 
+Second, check [syllabus](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/syllabus-llm-rag-agent.docx) to understand LLM, RAG and AI agent development course.</br>
+<img src="https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-2.transformer/transformer-architecture.PNG?raw=true" height="300" /></br>
 Before running the example code, ensure you have Colab Pro, Python 3.10 or higher installed. Some tool or library use NVIDIA GPU, so if you want to use it, prepare notebook computer with NVIDIA GPU(recommend 8GB. minimum 4GB)
 Follow the instructions below to set up your environment:
 - [LLM development environment document(word file)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/dev-env.docx)
