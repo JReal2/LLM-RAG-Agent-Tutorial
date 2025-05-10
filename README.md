@@ -1,18 +1,15 @@
 # LLM, RAG and AI Agent Tutorial
-This repository contains AI tool, lib installation link for LLM & AI Agent & MCP development, focusing on creative LLM coding, modeling, and computing as the viewpoint of project. 
-Please download and read the below docuemnt to understand this development environment. 
-- [LLM development environment document(word file)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/dev-env.docx)
-
-## Overview
-- **Huggingface**: For uisng LLM, Stable Diffusion-based model, You need to sign up Huggingface. In example, [Single Image-to-3D model](https://huggingface.co/spaces/stabilityai/stable-point-aware-3d)
-- **Ollama**: For using AI tools in interactive art projects. You need to install NVIDIA cuda for run it.
-
----
+This repository contains AI tool, lib installation and documents for LLM & AI Agent & MCP development, focusing on creative LLM coding, modeling, and computing as the viewpoint of project development. 
 
 ## Preparation and Installation
-
 Before running the examples, ensure you have Python 3.10 or higher installed. Some tool or library use NVIDIA GPU, so if you want to use it, prepare notebook computer with NVIDIA GPU(recommend 8GB. minimum 4GB)
 Follow the instructions below to set up your environment:
+- [LLM development environment document(word file)](https://github.com/mac999/LLM-RAG-Agent-Tutorial/blob/main/1-1.prepare/dev-env.docx)
+
+In refernce, this lesson will use the below 
+- **OpenAI**: To use ChatGPT LLM model, You need to create OpenAI API key
+- **Huggingface**: For uisng LLM, Stable Diffusion-based model, You need to sign up Huggingface. In example, [Single Image-to-3D model](https://huggingface.co/spaces/stabilityai/stable-point-aware-3d)
+- **Ollama**: For using AI tools in interactive art projects. You need to install NVIDIA cuda for run it.
 
 ### NVIDIA Drivers (for Ollama. optional)
 For GPU-accelerated tasks, you need to install the correct NVIDIA drivers for your GPU.
@@ -123,7 +120,7 @@ After completing the installations, verify that the environment is set up correc
    ```
 
 ## For media art
-The repository includes examples to experiment with generative media art.</br>
+If you're interested in media art, refer to the below link. The repository includes examples to experiment with generative media art.</br>
 - [Gen AI for Media Art](https://github.com/mac999/llm-media-art-demo)
 In addition, you can find Text-to-3D model tool the below link. 
 - [Text-to-3D model code](https://github.com/mac999/blender-llm-addin): Using Open-Source Models with Blender for AI-Assisted 3D Modeling: Comparative Study with OpenAI GPT
